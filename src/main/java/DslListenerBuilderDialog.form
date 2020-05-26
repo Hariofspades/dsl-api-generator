@@ -35,7 +35,7 @@
                 </constraints>
                 <properties>
                   <enabled value="true"/>
-                  <text value="OK"/>
+                  <text value="Generate"/>
                 </properties>
               </component>
               <component id="5723f" class="javax.swing.JButton" binding="mBtnCancel">
