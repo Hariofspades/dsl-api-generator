@@ -1,5 +1,5 @@
 # dsl-api-generator
-Generates binary compatible and Java interoperable DSL boilerplate code
+IntelliJ IDEA and Android Studio plugin to generate binary compatible and Java interoperable DSL boilerplate
 
 ![image](https://raw.githubusercontent.com/Hariofspades/dsl-api-generator/master/art.png)
 
