@@ -1,0 +1,69 @@
+/**
+* Generated using DSL Builder
+#foreach(${action} in ${actionParamMap.keySet()})
+* @param ${action} //TODO: define purpose and default value
+#end
+*/
+class ${className} private constructor(
+#foreach(${action} in ${actionParamMap.keySet()})
+#if(${velocityCount} == ${actionParamMap.size()})
+    val ${action}: ${actionParamMap.get($action)}
+#else
+    val ${action}: ${actionParamMap.get($action)},
+#end
+#end
+) {
+
+    override fun equals(other: Any?): Boolean {  //TODO: implement
+        return super.equals(other)
+    }
+
+    override fun hashCode(): Int { //TODO: implement
+        return super.hashCode()
+    }
+
+    override fun toString(): String { //TODO: implement
+        return super.toString()
+    }
+
+    /**
+     * A builder for this configuration class
+     *
+     * Should be directly used by Java consumers. Kotlin consumers should use DSL function
+     */
+    class Builder {
+#foreach(${action} in ${actionParamMap.keySet()})
+        @set:JvmSynthetic
+        lateinit var ${action}: ${actionParamMap.get($action)} //TODO: change to var and set default value
+#if(${velocityCount} == ${actionParamMap.size()})
+
+#else
+#end
+#end
+#foreach(${action} in ${actionParamMap.keySet()})
+        fun set${action.substring(0,1).toUpperCase()}${action.substring(1)}(${action}: ${actionParamMap.get($action)}) = apply {
+            this.${action} = ${action}
+        }
+#if(${velocityCount} != ${actionParamMap.size()})
+
+#else
+#end
+#end
+
+        fun build() = ${className}(
+#foreach(${action} in ${actionParamMap.keySet()})
+#if(${velocityCount} == ${actionParamMap.size()})
+            ${action}
+#else
+            ${action},
+#end
+#end
+        )
+
+    }
+}
+
+/**
+* DSL to create [$className]
+*/
+fun ${className.substring(0,1).toLowerCase()}${className.substring(1)}(block: ${className}.Builder.() -> Unit) = ${className}.Builder().apply(block).build()

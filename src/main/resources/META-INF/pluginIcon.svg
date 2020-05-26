@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-Plugin">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="Plugin" clip-path="url(#clip-Plugin)">
+    <g id="Group_17" data-name="Group 17" transform="translate(-1)">
+      <text id="_" data-name="{" transform="translate(1 27)" fill="none" stroke="#e77845" stroke-width="0.12" font-size="28" font-family="HelveticaNeue, Helvetica Neue" opacity="0.998"><tspan x="0" y="0">{</tspan></text>
+      <g id="Group_16" data-name="Group 16" transform="translate(1.345)">
+        <g id="Group_14" data-name="Group 14" transform="translate(3.122 3.587)">
+          <g id="Group_8" data-name="Group 8" transform="translate(0 0.65)">
+            <g id="Polygon_10" data-name="Polygon 10" transform="translate(0 16.896) rotate(-45)" fill="none">
+              <path d="M11.947,0,23.895,11.975H0Z" stroke="none"/>
+              <path d="M 11.94747734069824 0.1698999404907227 L 0.2892417907714844 11.85469627380371 L 23.605712890625 11.85469627380371 L 11.94747734069824 0.1698999404907227 M 11.94747734069824 -3.814697265625e-06 L 23.89495658874512 11.97469615936279 L -1.9073486328125e-06 11.97469615936279 L 11.94747734069824 -3.814697265625e-06 Z" stroke="none" fill="#e77845"/>
+            </g>
+            <g id="Polygon_11" data-name="Polygon 11" transform="translate(4.234 12.663) rotate(-45)" fill="none">
+              <path d="M5.96,0l5.96,5.987H0Z" stroke="none"/>
+              <path d="M 5.960131168365479 0.1701011657714844 L 0.2887811660766602 5.867342948913574 L 11.6314811706543 5.867342948913574 L 5.960131168365479 0.1701011657714844 M 5.960131168365479 2.86102294921875e-06 L 11.92026138305664 5.987343311309814 L 9.5367431640625e-07 5.987343311309814 L 5.960131168365479 2.86102294921875e-06 Z" stroke="none" fill="#0095d5"/>
+            </g>
+            <g id="Polygon_8" data-name="Polygon 8" transform="translate(8.419 16.806)" fill="none">
+              <path d="M8.518,0l8.518,8.546H0Z" stroke="none"/>
+              <path d="M 8.51836109161377 0.1699790954589844 L 0.2890586853027344 8.425577163696289 L 16.7476634979248 8.425577163696289 L 8.51836109161377 0.1699790954589844 M 8.51836109161377 -2.86102294921875e-06 L 17.03672027587891 8.545578002929688 L 1.9073486328125e-06 8.545578002929688 L 8.51836109161377 -2.86102294921875e-06 Z" stroke="none" fill="#806ee3"/>
+            </g>
+          </g>
+          <g id="Group_9" data-name="Group 9" transform="translate(0.371)">
+            <g id="Polygon_10-2" data-name="Polygon 10" transform="translate(0 16.896) rotate(-45)" fill="none">
+              <path d="M11.947,0,23.895,11.975H0Z" stroke="none"/>
+              <path d="M 11.94747734069824 0.1698999404907227 L 0.2892417907714844 11.85469627380371 L 23.605712890625 11.85469627380371 L 11.94747734069824 0.1698999404907227 M 11.94747734069824 -3.814697265625e-06 L 23.89495658874512 11.97469615936279 L -1.9073486328125e-06 11.97469615936279 L 11.94747734069824 -3.814697265625e-06 Z" stroke="none" fill="#e77845"/>
+            </g>
+            <g id="Polygon_11-2" data-name="Polygon 11" transform="translate(4.234 12.663) rotate(-45)" fill="none">
+              <path d="M5.96,0l5.96,5.987H0Z" stroke="none"/>
+              <path d="M 5.960131168365479 0.1701011657714844 L 0.2887811660766602 5.867342948913574 L 11.6314811706543 5.867342948913574 L 5.960131168365479 0.1701011657714844 M 5.960131168365479 2.86102294921875e-06 L 11.92026138305664 5.987343311309814 L 9.5367431640625e-07 5.987343311309814 L 5.960131168365479 2.86102294921875e-06 Z" stroke="none" fill="#0095d5"/>
+            </g>
+            <g id="Polygon_8-2" data-name="Polygon 8" transform="translate(8.419 16.806)" fill="none">
+              <path d="M8.518,0l8.518,8.546H0Z" stroke="none"/>
+              <path d="M 8.51836109161377 0.1699790954589844 L 0.2890586853027344 8.425577163696289 L 16.7476634979248 8.425577163696289 L 8.51836109161377 0.1699790954589844 M 8.51836109161377 -2.86102294921875e-06 L 17.03672027587891 8.545578002929688 L 1.9073486328125e-06 8.545578002929688 L 8.51836109161377 -2.86102294921875e-06 Z" stroke="none" fill="#806ee3"/>
+            </g>
+          </g>
+        </g>
+        <text id="_2" data-name="{" transform="translate(0 27)" fill="none" stroke="#806ee3" stroke-width="0.12" font-size="28" font-family="HelveticaNeue, Helvetica Neue" opacity="0.998"><tspan x="0" y="0">{</tspan></text>
+        <g id="Group_15" data-name="Group 15" transform="translate(39.043 39.043) rotate(180)">
+          <text id="_3" data-name="{" transform="translate(0 27)" fill="none" stroke="#e77845" stroke-width="0.12" font-size="28" font-family="HelveticaNeue, Helvetica Neue" opacity="0.998"><tspan x="0" y="0">{</tspan></text>
+          <text id="_4" data-name="{" transform="translate(0.388 27.043)" fill="none" stroke="#0095d5" stroke-width="0.12" font-size="28" font-family="HelveticaNeue, Helvetica Neue" opacity="0.998"><tspan x="0" y="0">{</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

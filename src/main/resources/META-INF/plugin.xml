@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>dev.harivignesh.dsl</id>
+    <name>DSL API Generator</name>
+    <vendor email="hariutd@gmail.com" url="http://www.harivignesh.dev">Hari Vignesh</vendor>
+
+    <description><![CDATA[
+    Generate binary compatible and Java interoperable DSL boilerplate code. Based on Jake Wharton's blog on <a href="https://jakewharton.com/public-api-challenges-in-kotlin/">"Public API challenges in Kotlin"</a>.
+    <br>
+    <br>
+    <ul>
+    <li>Interoperable with Java</li>
+    <li>Binary and source compatible</li>
+    <li>Generates comments
+    </ul>
+    <br>
+    ]]></description>
+
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <actions>
+        <action class="action.DSLBuilderAction" id="DslListenerBuilder" text="DSL API Generator" description="Builds DSL" popup="true">
+            <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="GenerateGroup"/>
+        </action>
+    </actions>
+</idea-plugin>
