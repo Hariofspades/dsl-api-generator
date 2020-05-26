@@ -14,15 +14,14 @@
     <li>Generates comments
     </ul>
     <H3> How to use?</H3>
-    <ul><br>
+    <ul>
     <li>Create an empty Kotlin file</li>
     <li>Go to menu "Code" -> "Generate" or use respective keyboard shortcut</li>
     <li>Choose "DSL API Generator"</li>
     <li>Add propertys and types</li>
     <li>Add a class name</li>
     <li>Select "Generate"</li>
-    <li></li>
-    </ul><br>
+    </ul>
     <H3>Output</H3>
     <img src="https://raw.githubusercontent.com/Hariofspades/dsl-api-generator/master/art.png"/>
     <br>
