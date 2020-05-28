@@ -33,6 +33,11 @@ compileTestKotlin {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+    Intial release of the plugin with the features<br>
+    <ul>
+    <li>Interoperable with Java</li>
+    <li>Binary and source compatible</li>
+    <li>Generates comments
+    </ul>
+    """
 }
