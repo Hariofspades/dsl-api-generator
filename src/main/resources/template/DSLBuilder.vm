@@ -1,9 +1,9 @@
 /**
-* Generated using DSL Builder
+ * Generated using DSL Builder
 #foreach(${action} in ${actionParamMap.keySet()})
-* @param ${action} //TODO: define purpose and default value
+ * @param ${action} //TODO: define purpose and default value
 #end
-*/
+ */
 class ${className} private constructor(
 #foreach(${action} in ${actionParamMap.keySet()})
 #if(${velocityCount} == ${actionParamMap.size()})
@@ -14,17 +14,11 @@ class ${className} private constructor(
 #end
 ) {
 
-    override fun equals(other: Any?): Boolean {  //TODO: implement
-        return super.equals(other)
-    }
+    override fun equals(other: Any?): Boolean = TODO("implement")
 
-    override fun hashCode(): Int { //TODO: implement
-        return super.hashCode()
-    }
+    override fun hashCode(): Int = TODO("implement")
 
-    override fun toString(): String { //TODO: implement
-        return super.toString()
-    }
+    override fun toString(): String = TODO("implement")
 
     /**
      * A builder for this configuration class
@@ -34,9 +28,9 @@ class ${className} private constructor(
     class Builder {
 #foreach(${action} in ${actionParamMap.keySet()})
         @set:JvmSynthetic
-        lateinit var ${action}: ${actionParamMap.get($action)} //TODO: change to var and set default value
-#if(${velocityCount} == ${actionParamMap.size()})
+        var ${action}: ${actionParamMap.get($action)} = TODO("provide default value")
 
+#if(${velocityCount} == ${actionParamMap.size()})
 #else
 #end
 #end
@@ -64,6 +58,7 @@ class ${className} private constructor(
 }
 
 /**
-* DSL to create [$className]
-*/
+ * DSL to create [$className]
+ */
+@JvmSynthetic
 fun ${className.substring(0,1).toLowerCase()}${className.substring(1)}(block: ${className}.Builder.() -> Unit) = ${className}.Builder().apply(block).build()

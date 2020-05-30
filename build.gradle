@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'dev.harivignesh'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -32,12 +32,12 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 patchPluginXml {
+    sinceBuild '192'
+    untilBuild '201'
     changeNotes """
-    Intial release of the plugin with the features<br>
+    Patch<br>
     <ul>
-    <li>Interoperable with Java</li>
-    <li>Binary and source compatible</li>
-    <li>Generates comments
+    <li>Supporting different version of AS and IDEA</li>
     </ul>
     """
 }

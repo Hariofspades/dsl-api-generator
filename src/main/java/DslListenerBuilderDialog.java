@@ -96,7 +96,7 @@ public class DslListenerBuilderDialog extends JDialog {
 
     private void refreshActionListView() {
         mActionListView.setModel(new DefaultComboBoxModel(mModelListenerList.stream().map(it ->
-                String.format(Locale.US, "%s: %s", it.getActionName(), it.getReturnValueType())
+                String.format(Locale.US, "%s: %s", it.getPropertyName(), it.getReturnValueType())
         ).toArray()));
         mActionListView.setSelectedIndex(0);
     }
@@ -106,7 +106,7 @@ public class DslListenerBuilderDialog extends JDialog {
         if (mDialogListener != null) {
             Map<String, String> map = new HashMap<>();
             for (JModel vModelListener : mModelListenerList) {
-                map.put(vModelListener.getActionName(), String.format(Locale.US, "%s", vModelListener.getReturnValueType()));
+                map.put(vModelListener.getPropertyName(), String.format(Locale.US, "%s", vModelListener.getReturnValueType()));
             }
             if (!mClassName.getText().equals("")) {
                 mDialogListener.onOkBtnClicked(map, mClassName.getText());
