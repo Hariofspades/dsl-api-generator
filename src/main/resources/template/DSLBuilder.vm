@@ -28,7 +28,7 @@ class ${className} private constructor(
     class Builder {
 #foreach(${action} in ${actionParamMap.keySet()})
         @set:JvmSynthetic
-        var ${action}: ${actionParamMap.get($action)} = TODO("provide default value")
+        var ${action}: ${actionParamMap.get($action)} = TODO("provide a default value")
 
 #if(${velocityCount} == ${actionParamMap.size()})
 #else
@@ -61,4 +61,8 @@ class ${className} private constructor(
  * DSL to create [$className]
  */
 @JvmSynthetic
+#if(${pascalCase})
+fun ${className}(block: ${className}.Builder.() -> Unit) = ${className}.Builder().apply(block).build()
+#else
 fun ${className.substring(0,1).toLowerCase()}${className.substring(1)}(block: ${className}.Builder.() -> Unit) = ${className}.Builder().apply(block).build()
+#end

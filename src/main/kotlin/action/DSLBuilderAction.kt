@@ -19,9 +19,13 @@ class DSLBuilderAction : AnAction() {
                     // No implementation
                 }
 
-                override fun onOkBtnClicked(map: MutableMap<String, String>?, className: String) {
+                override fun onGenerateClicked(
+                    map: MutableMap<String, String>?,
+                    className: String,
+                    pascalCase: Boolean
+                ) {
                     if (!map.isNullOrEmpty()) {
-                        generateCode(map, className, event)
+                        generateCode(map, className, pascalCase, event)
                     } else print("map is empty")
                 }
             })
@@ -40,8 +44,13 @@ class DSLBuilderAction : AnAction() {
         event.presentation.isEnabled = true
     }
 
-    private fun generateCode(map: Map<String, String>, className: String, event: AnActionEvent) {
-        val generateCode: String = VelocityEngineUtil.evaluate(map, className)
+    private fun generateCode(
+        map: Map<String, String>,
+        className: String,
+        pascalCase: Boolean,
+        event: AnActionEvent
+    ) {
+        val generateCode: String = VelocityEngineUtil.evaluate(map, className, pascalCase)
         val editor: Editor? = event.dataContext.getData(EDITOR)
         if (editor != null) {
             try {

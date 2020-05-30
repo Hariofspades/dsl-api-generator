@@ -20,6 +20,7 @@ public class DslListenerBuilderDialog extends JDialog {
     private JPanel contentPane;
     private JList mActionListView;
     private JComboBox<String> mCBoxValueType;
+    private JCheckBox pascalCase;
     private List<JModel> mModelListenerList = new ArrayList<>();
     private int[] mSelectedIndexArray;
     private DialogListener mDialogListener;
@@ -49,9 +50,9 @@ public class DslListenerBuilderDialog extends JDialog {
     }
 
     private void initEvent() {
-        mBtnOK.addActionListener(e -> onOK());
+        mBtnOK.addActionListener(e -> onGenerate());
         mBtnCancel.addActionListener(e -> onCancel());
-        mBtnAdd.addActionListener(e -> addActionItem());
+        mBtnAdd.addActionListener(e -> addProperty());
         mBtnDelete.addActionListener(e -> {
             if (mSelectedIndexArray.length > 0 && mSelectedIndexArray.length <= mModelListenerList.size()) {
                 for (int selectedIndex : mSelectedIndexArray) {
@@ -69,7 +70,7 @@ public class DslListenerBuilderDialog extends JDialog {
 
     }
 
-    private void addActionItem() {
+    private void addProperty() {
         String actionName = mTFieldActionName.getText();
         Object selectedItem = mCBoxValueType.getSelectedItem();
         String returnValueType = (selectedItem != null) ? selectedItem.toString() : "Unit";
@@ -91,7 +92,6 @@ public class DslListenerBuilderDialog extends JDialog {
 
     private void resetInput() {
         mTFieldActionName.setText("");
-        //mCBoxValueType.setSelectedIndex(0);
     }
 
     private void refreshActionListView() {
@@ -102,14 +102,14 @@ public class DslListenerBuilderDialog extends JDialog {
     }
 
 
-    private void onOK() {
+    private void onGenerate() {
         if (mDialogListener != null) {
             Map<String, String> map = new HashMap<>();
             for (JModel vModelListener : mModelListenerList) {
                 map.put(vModelListener.getPropertyName(), String.format(Locale.US, "%s", vModelListener.getReturnValueType()));
             }
             if (!mClassName.getText().equals("")) {
-                mDialogListener.onOkBtnClicked(map, mClassName.getText());
+                mDialogListener.onGenerateClicked(map, mClassName.getText(), pascalCase.isSelected());
                 dispose();
             } else {
                 Toolkit.getDefaultToolkit().beep();
@@ -133,8 +133,7 @@ public class DslListenerBuilderDialog extends JDialog {
     }
 
     public interface DialogListener {
-        void onOkBtnClicked(Map<String, String> map, String className);
-
+        void onGenerateClicked(Map<String, String> map, String className, Boolean pascalCase);
         void onCancelBtnClicked();
     }
 }
