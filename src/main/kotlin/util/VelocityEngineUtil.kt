@@ -22,7 +22,7 @@ object VelocityEngineUtil {
         engine = VelocityEngine(properties).apply { init() }
     }
 
-    fun evaluate(map: Map<String, String>, className: String, pascalCase: Boolean): String {
+    fun evaluate(map: LinkedHashMap<String, String>, className: String, pascalCase: Boolean): String {
         val velocityTemplate: String = FileUtil.loadTextAndClose(this::class.java.getResourceAsStream("/template/DSLBuilder.vm"))
         println("VelocityEngineHelper: velocityTemplate is $velocityTemplate")
         val velocityContext = VelocityContext().apply {

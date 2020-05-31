@@ -86,7 +86,6 @@ public class DslListenerBuilderDialog extends JDialog {
             Toolkit.getDefaultToolkit().beep();
             JOptionPane.showMessageDialog(null, "cannot add more than 30 items", "DSL API Generator", JOptionPane.ERROR_MESSAGE);
         }
-
         resetInput();
     }
 
@@ -104,9 +103,10 @@ public class DslListenerBuilderDialog extends JDialog {
 
     private void onGenerate() {
         if (mDialogListener != null) {
-            Map<String, String> map = new HashMap<>();
-            for (JModel vModelListener : mModelListenerList) {
-                map.put(vModelListener.getPropertyName(), String.format(Locale.US, "%s", vModelListener.getReturnValueType()));
+            LinkedHashMap<String, String> map = new LinkedHashMap<>();
+            for (int index = 0; index < mModelListenerList.size(); index++) {
+                map.put(mModelListenerList.get(index).getPropertyName(),
+                        String.format(Locale.US, "%s", mModelListenerList.get(index).getReturnValueType()));
             }
             if (!mClassName.getText().equals("")) {
                 mDialogListener.onGenerateClicked(map, mClassName.getText(), pascalCase.isSelected());
@@ -133,7 +133,7 @@ public class DslListenerBuilderDialog extends JDialog {
     }
 
     public interface DialogListener {
-        void onGenerateClicked(Map<String, String> map, String className, Boolean pascalCase);
+        void onGenerateClicked(LinkedHashMap<String, String> map, String className, Boolean pascalCase);
         void onCancelBtnClicked();
     }
 }

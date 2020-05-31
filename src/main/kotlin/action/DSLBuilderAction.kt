@@ -8,6 +8,7 @@ import DslListenerBuilderDialog
 import extensions.showDialog
 import util.CodeUtil
 import util.VelocityEngineUtil
+import java.util.LinkedHashMap
 
 class DSLBuilderAction : AnAction() {
 
@@ -20,7 +21,7 @@ class DSLBuilderAction : AnAction() {
                 }
 
                 override fun onGenerateClicked(
-                    map: MutableMap<String, String>?,
+                    map: LinkedHashMap<String, String>?,
                     className: String,
                     pascalCase: Boolean
                 ) {
@@ -45,10 +46,10 @@ class DSLBuilderAction : AnAction() {
     }
 
     private fun generateCode(
-        map: Map<String, String>,
-        className: String,
-        pascalCase: Boolean,
-        event: AnActionEvent
+            map: LinkedHashMap<String, String>,
+            className: String,
+            pascalCase: Boolean,
+            event: AnActionEvent
     ) {
         val generateCode: String = VelocityEngineUtil.evaluate(map, className, pascalCase)
         val editor: Editor? = event.dataContext.getData(EDITOR)
