@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'dev.harivignesh'
-version '1.0.0'
+version '1.0.2'
 
 repositories {
     mavenCentral()
@@ -23,7 +23,7 @@ intellij {
 runIde {
     // Absolute path to installed target 3.5 Android Studio to use as IDE Development Instance
     // The "Contents" directory is macOS specific.
-    ideDirectory '/Applications/Android Studio.app/Contents'
+    // ideDirectory '/Applications/Android Studio.app/Contents'
 }
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
@@ -32,12 +32,15 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 patchPluginXml {
+    sinceBuild '192'
+    untilBuild '201'
     changeNotes """
-    Intial release of the plugin with the features<br>
+    Release notes<br>
     <ul>
-    <li>Interoperable with Java</li>
-    <li>Binary and source compatible</li>
-    <li>Generates comments
+    <li>Better alignment for generated code</li>
+    <li>Leveraging Kotlin TODO()</li>
+    <li>@JvmSynthetic factory DSL function</li>
+    <li>Pascal case support for factory DSL function</li>
     </ul>
     """
 }

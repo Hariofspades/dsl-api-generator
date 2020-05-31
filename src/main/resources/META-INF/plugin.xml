@@ -4,7 +4,8 @@
     <vendor email="hariutd@gmail.com" url="http://www.harivignesh.dev">Hari Vignesh J</vendor>
 
     <description><![CDATA[
-    Generate binary compatible and Java interoperable DSL boilerplate code. Based on Jake Wharton's blog on <a href="https://jakewharton.com/public-api-challenges-in-kotlin/">"Public API challenges in Kotlin"</a>.
+    Generate binary compatible and Java interoperable DSL boilerplate code.<br>
+    Based on Jake Wharton's blog on <a href="https://jakewharton.com/public-api-challenges-in-kotlin/">"Public API challenges in Kotlin"</a>.
     <br>
     <br>
     <H3>Features</H3>
@@ -16,7 +17,7 @@
     <H3> How to use?</H3>
     <ul>
     <li>Create an empty Kotlin file</li>
-    <li>Go to menu "Code" -> "Generate" or use respective keyboard shortcut</li>
+    <li>Go to menu "Code" -> "Generate"</li>
     <li>Choose "DSL API Generator"</li>
     <li>Add propertys and types</li>
     <li>Add a class name</li>
