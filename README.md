@@ -1,4 +1,4 @@
-# dsl-api-generator
+# dsl-api-generator: [(Download)](https://plugins.jetbrains.com/plugin/14386-dsl-api-generator)
 IntelliJ IDEA and Android Studio plugin to generate binary compatible and Java interoperable DSL boilerplate
 
 ![image](https://raw.githubusercontent.com/Hariofspades/dsl-api-generator/master/preview.png)
@@ -12,6 +12,6 @@ IntelliJ IDEA and Android Studio plugin to generate binary compatible and Java i
 * Create an empty Kotlin file
 * Go to menu "Code" -> "Generate" or use respective keyboard shortcut
 * Choose "DSL API Generator"
-* Add propertys and types
+* Add properties and types
 * Add a class name
 * Select "Generate"
